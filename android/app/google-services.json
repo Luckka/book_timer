@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "555011840074",
+    "project_id": "d7-book-timer",
+    "storage_bucket": "d7-book-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555011840074:android:faa54e790b29c3d93baeb3",
+        "android_client_info": {
+          "package_name": "com.example.book_timer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555011840074-0geddlknh13bn2pn4j5flfom9og9c7d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-uU9IOCaewYMOZz8Voojh0YANIeCap0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555011840074-0geddlknh13bn2pn4j5flfom9og9c7d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
