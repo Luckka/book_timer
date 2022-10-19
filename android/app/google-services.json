@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "174515227682",
+    "project_id": "tm-book",
+    "storage_bucket": "tm-book.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174515227682:android:a3a7c878c39b66a80fce7b",
+        "android_client_info": {
+          "package_name": "com.example.book_timing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174515227682-cu1aip9hiua0l84vkbai1vl127gnupl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH5JRyYMbInjlYo1Yl8oc9EIqRNQnalh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174515227682-cu1aip9hiua0l84vkbai1vl127gnupl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
