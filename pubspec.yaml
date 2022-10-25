@@ -25,11 +25,11 @@ dependencies:
   firebase_core:
   firebase_auth: ^3.3.19
   google_sign_in: ^5.3.3
-  bloc:
+  bloc: 
   flutter_bloc:
   equatable:
-  isar:
-  isar_flutter_libs:
+  isar: 2.5.0
+  isar_flutter_libs: 2.5.0
   path_provider:
 
 dev_dependencies:

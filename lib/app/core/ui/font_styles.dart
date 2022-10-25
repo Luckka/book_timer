@@ -29,7 +29,7 @@ class FontStyles {
     fontFamily: _defaultFont,
     fontSize: 32,
     fontWeight: FontWeight.w700,
-    color: Colors.white
+    color: Colors.grey[200]
 
   );
 
