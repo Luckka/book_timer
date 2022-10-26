@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
                 height: 49,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey[200]),
+                        primary: Colors.grey[200]),
                     onPressed: () {
                       controller.signIn();
                     },

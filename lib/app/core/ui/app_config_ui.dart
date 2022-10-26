@@ -32,7 +32,7 @@ class AppConfigUi {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0XFFEFC429),
+        primary: const Color(0XFFEFC429),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
         )

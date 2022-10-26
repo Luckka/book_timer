@@ -1,4 +1,6 @@
+import 'package:book_timer/app/modules/home/widgets/header_projects_menu.dart';
 import 'package:flutter/material.dart';
+
 
 class HomePage extends StatelessWidget {
 
@@ -6,9 +8,77 @@ class HomePage extends StatelessWidget {
 
    @override
    Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(title: const Text(''),),
-           body: Container(),
+       return  Scaffold(
+          drawer: const Drawer(
+            child: SafeArea(child: ListTile(
+              title: Text('Sair'),
+            )),
+          ),
+           body: SafeArea(
+             child: CustomScrollView(
+               slivers: [
+                const SliverAppBar(
+                  title: Text("Livros"),
+                  expandedHeight: 100,
+                  toolbarHeight: 100,
+                  centerTitle: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(15)
+                    )
+                  ),
+                ),
+                SliverPersistentHeader(
+                  delegate: HeaderProjectsMenu(),
+                  pinned: true,
+                ),
+                SliverList(delegate: SliverChildListDelegate([
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    height: 200,
+                  ),
+           
+                 
+                ]))
+               ],
+             ),
+           ),
        );
   }
 }
