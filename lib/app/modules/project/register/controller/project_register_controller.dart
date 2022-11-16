@@ -8,7 +8,7 @@ import '../../../../entities/project_status.dart';
 part 'project_register_state.dart';
 
 class ProjectRegisterController extends Cubit<ProjectRegisterStatus> {
-  ProjectService _projectService;
+  final ProjectService _projectService;
   ProjectRegisterController({required ProjectService projectService})
       : _projectService = projectService,
         super(ProjectRegisterStatus.initial);
@@ -20,7 +20,7 @@ class ProjectRegisterController extends Cubit<ProjectRegisterStatus> {
         name: name,
         estimate: estimate,
         status: ProjectStatus.em_andamento,
-        tasks: [],
+        notes: [],
       );
       await _projectService.register(projectViewModel);
       emit(ProjectRegisterStatus.sucess);

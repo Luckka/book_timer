@@ -8,14 +8,14 @@ class ProjectViewModel {
   final String name;
   final int estimate;
   final ProjectStatus status;
-  final List<ProjectTaskViewModel> tasks;
+  final List<ProjectTaskViewModel> notes;
 
   ProjectViewModel(
       {this.id,
       required this.name,
       required this.estimate,
       required this.status,
-      required this.tasks});
+      required this.notes});
 
 
   factory ProjectViewModel.fromEntity(Project project) {
@@ -27,7 +27,7 @@ class ProjectViewModel {
         name: project.name,
         estimate: project.estimate,
         status: project.status,
-        tasks: project.tasks.map(ProjectTaskViewModel.fromEntity).toList()
+        notes: project.tasks.map(ProjectTaskViewModel.fromEntity).toList()
       );
   }
 

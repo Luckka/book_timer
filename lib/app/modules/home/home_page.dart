@@ -2,7 +2,6 @@ import 'package:asuka/asuka.dart';
 import 'package:book_timer/app/modules/home/controllers/home_controller.dart';
 import 'package:book_timer/app/modules/home/widgets/header_projects_menu.dart';
 import 'package:book_timer/app/modules/home/widgets/project_tile.dart';
-import 'package:book_timer/app/modules/project/project_module.dart';
 import 'package:book_timer/app/view_models/project_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,12 +14,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<HomeController, HomeState>(
-      bloc:controller,
+      bloc: controller,
       listener: (context, state) {
-        if(state.status == HomeStatus.failure){
-           AsukaSnackbar.alert('Erro ao buscar livros').show();
+        if (state.status == HomeStatus.failure) {
+          AsukaSnackbar.alert('Erro ao buscar livros').show();
         }
-       
       },
       child: Scaffold(
         drawer: const Drawer(
@@ -66,7 +64,8 @@ class HomePage extends StatelessWidget {
                 builder: (context, projects) {
                   return SliverList(
                       delegate: SliverChildListDelegate(projects
-                          .map((project) => ProjectTile(projectViewModel:project))
+                          .map((project) =>
+                              ProjectTile(projectViewModel: project))
                           .toList()));
                 },
               )

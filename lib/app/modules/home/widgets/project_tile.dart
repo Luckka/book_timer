@@ -1,5 +1,6 @@
 import 'package:book_timer/app/view_models/project_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class ProjectTile extends StatelessWidget {
   final ProjectViewModel projectViewModel;
@@ -8,17 +9,22 @@ class ProjectTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: const BoxConstraints(maxHeight: 90),
-      margin: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.grey[300]!, width: 4)),
-      child: Column(
-        children: [
-          _ProjectName(projectViewModel: projectViewModel),
-          Expanded(child: _ProjectProgress(projectViewModel: projectViewModel))
-        ],
+    return InkWell(
+      onTap: (){
+        Modular.to.pushNamed('/project/detail', arguments: projectViewModel);
+      },
+      child: Container(
+        constraints: const BoxConstraints(maxHeight: 90),
+        margin: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: Colors.grey[300]!, width: 4)),
+        child: Column(
+          children: [
+            _ProjectName(projectViewModel: projectViewModel),
+            Expanded(child: _ProjectProgress(projectViewModel: projectViewModel))
+          ],
+        ),
       ),
     );
   }
@@ -55,7 +61,7 @@ class _ProjectProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final totalTasks = projectViewModel.tasks.fold<int>(0,(previousValue,task) => previousValue += task.duration);
+    final totalTasks = projectViewModel.notes.fold<int>(0,(previousValue,task) => previousValue += task.duration);
     var percent = 0.0;
 
     if(totalTasks > 0){
